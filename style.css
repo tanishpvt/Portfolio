@@ -4,6 +4,10 @@ body{
     margin: 0;
     padding: 0;
 }
+*::selection{
+    background-color: black;
+    color: blanchedalmond;
+}
 
 :root{
     --color-black: #000000;
@@ -93,6 +97,7 @@ body{
 .site-banner .banner-area{
     background: url(./assets/Banner_image.jpg) no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -123,11 +128,15 @@ body{
 #footer form .row .col input[type="text"],
 #footer form .row .col input[type="email"],
 #footer form textarea{
+    padding: 1rem 0.5rem;
     border: none;
+    outline: none;
     border-radius: 0;
     border-bottom: 1px solid gray;
-    padding: 1.5rem 1rem;
+    box-shadow: none;
+    resize: none;
 }
+
 
 @media screen and (min-width: 768px){
     .toggle-button{
@@ -139,3 +148,46 @@ body{
 }
 
 /* #site-main */
+
+
+/*panel hover */
+
+.panel{
+    transform: scale(0.95);
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+.panel:hover{
+    transform: scale(1.00);
+}
+
+body::-webkit-scrollbar {
+    width: 4px;
+    padding-top: 50px;
+}
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom right,    #000000, #1a1a1a);
+    border-radius: 3rem;
+}
+
+.btn-dark-1{
+    background-color: #000000bb;
+    color: #f7f7f7;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+}
+.btn-dark-1:hover{
+    color: #fff;
+    background-color: #000;
+    transform: scale(1.03);
+}
+
